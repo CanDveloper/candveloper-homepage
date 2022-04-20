@@ -1,4 +1,3 @@
-import next from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
@@ -13,25 +12,30 @@ const LogoBox = styled.span`
     line-height: 25px;
     padding: 10px;
 
+    img {
+        transform: rotate(270deg);
+    }
+
     &:hover img {
-        transform: rotate(20deg);
-        transform-duration: 5s;
+        transform: rotate(250deg);
     }
 `
 
 const Logo = () => {
     const blackRabbitVector = `/black_rabbit_vector${useColorModeValue(
         '',
-        '-dark'
+        ''
     )}.svg`
+
+    const carrotVector = `/carrot_II${useColorModeValue('', '')}.svg`
 
     return (
         <Link href="/">
             <a>
                 <LogoBox>
                     <Image
-                        src={blackRabbitVector}
-                        width={27}
+                        src={carrotVector}
+                        width={40}
                         height={27}
                         alt="logo"
                     />
