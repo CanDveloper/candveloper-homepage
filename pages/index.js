@@ -1,9 +1,12 @@
-import { Image, Container, Box, Heading } from '@chakra-ui/react'
+import { Image, Container, Box, Heading, useColorModeValue, Link } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const Page = () => {
     return (
         <Container>
-            <Box borderRadius="lg" bg="red" p={3} mb={6} align="center">
+            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
                 Hello, I'm a full-stack developer based in EU!
             </Box>
 
@@ -33,6 +36,20 @@ const Page = () => {
                     />
                 </Box>
             </Box>
+            <Section delay={0.1}>
+            <Heading as="h3" variant="section-title">
+                Work
+            </Heading>
+            <Paragraph>
+                Jaime is software engineer and a full-stack developer
+                based in La Coruña. 
+                <NextLink href="/works/inkdrop">
+                    <Link>
+                        TradeMarket
+                    </Link>
+                </NextLink>
+            </Paragraph>
+            </Section>
         </Container>
     )
 }
