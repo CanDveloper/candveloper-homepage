@@ -7,7 +7,7 @@ const LogoBox = styled.span`
     font-weight: bold;
     font-size: 18px;
     display: inline-flex;
-    alig-items: center;
+    align-items: center;
     height: 50px;
     line-height: 25px;
     padding: 10px;
@@ -22,10 +22,6 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const blackRabbitVector = `/black_rabbit_vector${useColorModeValue(
-        '',
-        ''
-    )}.svg`
 
     const carrotVector = `/carrot_II${useColorModeValue('', '')}.svg`
 

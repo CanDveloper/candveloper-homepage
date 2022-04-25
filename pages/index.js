@@ -4,14 +4,19 @@ import {
     Box,
     Heading,
     useColorModeValue,
-    Link,
-    Button
+    Button,
+    SimpleGrid,
+    List,
+    ListItem,
+    Icon
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
+import {IoLogoGithub, IoLogoInstagram} from 'react-icons/io5'
+import GridItem from '../components/grid-item'
 
 const Page = () => {
     return (
@@ -23,7 +28,7 @@ const Page = () => {
                 mb={6}
                 align="center"
             >
-                Hello, I'm a full-stack developer based in EU!
+                Hello, I&apos;m a full-stack developer based in Spain!
             </Box>
 
             <Box display={{ md: 'flex' }}>
@@ -58,7 +63,7 @@ const Page = () => {
                 </Heading>
                 <Paragraph>
                     Jaime is a software engineer and a full-stack developer
-                    based in La Coruña, Spain. He is very passionate about
+                    based in La Coruña. He is very passionate about
                     technologie so he decided to learn how to create digital
                     products, following good engineering practices, from
                     planning and designing to the implementation of final
@@ -70,7 +75,12 @@ const Page = () => {
                     <NextLink href="/works">
                         <Button
                             rightIcon={<ChevronRightIcon />}
-                            colorScheme="teal"
+                            colorScheme={useColorModeValue('yellow','teal')}
+                            textColor={useColorModeValue('white', 'black')}
+                            /*
+                            textColor={useColorModeValue('white', 'black')}
+                            */
+                            
                         >
                             My portfolio
                         </Button>
@@ -88,12 +98,12 @@ const Page = () => {
                 </BioSection>
                 <BioSection>
                     <BioYear>2021</BioYear>
-                    Completed the Computer Engineering Degree at Univeristy of
+                    Completed the Computer Engineering Degree at University of
                     La Coruña.
                 </BioSection>
                 <BioSection>
                     <BioYear>2022</BioYear>
-                    Completing the Master's Degree in Computer Engineering at
+                    Completing the Master&apos;s Degree in Computer Engineering at
                     the University of La Coruña. Also working at Odeene
                     Engineering.
                 </BioSection>
@@ -107,6 +117,30 @@ const Page = () => {
                     Music, Writing, Traveling, Sports, Movies, Finances,
                     Gastronomy
                 </Paragraph>
+            </Section>
+
+            <Section delay={0.3}>
+                <Heading
+                    as="h3"  variant="section-title"
+                >
+                    Around the web
+                </Heading>
+                <List>
+                    <ListItem>
+                        <NextLink href="https://github.com/CanDveloper" target="_blank" >
+                            <Button variant="ghost" colorScheme={useColorModeValue('teal','teal')} leftIcon={<Icon as={IoLogoGithub}/>}>
+                                @CanDveloper
+                            </Button>
+                        </NextLink>
+                    </ListItem>
+                    <ListItem>
+                        <NextLink href="https://github.com/CanDveloper" target="_blank" >
+                            <Button variant="ghost" colorScheme={useColorModeValue('teal','teal')} leftIcon={<Icon as={IoLogoInstagram}/>}>
+                                @CanDveloper
+                            </Button>
+                        </NextLink>
+                    </ListItem>
+                </List>
             </Section>
         </Container>
     )
