@@ -16,7 +16,7 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
-import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5'
 import GridItem from '../components/grid-item'
 
 const Page = () => {
@@ -76,8 +76,8 @@ const Page = () => {
                     <NextLink href="/works">
                         <Button
                             rightIcon={<ChevronRightIcon />}
-                            colorScheme={useColorModeValue('yellow', 'teal')}
-                            textColor={useColorModeValue('white', 'black')}
+                            colorScheme={useColorModeValue('teal', 'teal')}
+                            
                             /*
                             textColor={useColorModeValue('white', 'black')}
                             */
@@ -155,7 +155,7 @@ const Page = () => {
                     </ListItem>
                     <ListItem>
                         <NextLink
-                            href="https://github.com/CanDveloper"
+                            href="https://www.instagram.com/candveloper/"
                             target="_blank"
                         >
                             <Button
@@ -164,6 +164,20 @@ const Page = () => {
                                 leftIcon={<Icon as={IoLogoInstagram} />}
                             >
                                 CanDveloper
+                            </Button>
+                        </NextLink>
+                    </ListItem>
+                    <ListItem>
+                        <NextLink
+                            href="https://twitter.com/candveloper"
+                            target="_blank"
+                        >
+                            <Button
+                                variant="ghost"
+                                colorScheme={useColorModeValue('teal', 'teal')}
+                                leftIcon={<Icon as={IoLogoTwitter} />}
+                            >
+                                @CanDveloper
                             </Button>
                         </NextLink>
                     </ListItem>
